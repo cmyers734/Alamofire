@@ -161,7 +161,7 @@ public struct URLEncoding: ParameterEncoding {
             }
         } else if let array = value as? [Any] {
             for value in array {
-                components += queryComponents(fromKey: "\(key)[]", value: value)
+                components += queryComponents(fromKey: "\(key)", value: value)
             }
         } else if let value = value as? NSNumber {
             if value.isBool {
